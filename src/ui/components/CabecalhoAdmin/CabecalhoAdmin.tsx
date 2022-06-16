@@ -11,7 +11,10 @@ export default function CabecalhoAdmin() {
     return (
         <CabecalhoContainerStyle>
             <div className='ab'>
-                <LogoStyle src='Image/logo.svg' alt={'Adote um Pet'} />
+                <Link href='/'>
+                    <LogoStyle src='Image/logo.svg' alt={'Adote um Pet'} />
+                </Link>
+
                 <LinksContainerStyle>
                     <Link href='/pets/Cadastro' component={NextLink}>
                         <a>Cadastrar Pet </a>

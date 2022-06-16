@@ -7,13 +7,15 @@ import CabecalhoAdmin from '../ui/components/CabecalhoAdmin/CabecalhoAdmin'
 import { useRouter } from 'next/router'
 
 
+//{router.pathname === '/' ? <Cabecalho /> : <CabecalhoAdmin />}
+
 function MyApp({ Component, pageProps }: AppProps) {
 
   const router = useRouter();
 
   return (
     <ThemeProvider theme={tema}>
-      {router.pathname === '/' ? <Cabecalho /> : <CabecalhoAdmin />}
+      <CabecalhoAdmin />
       <Component {...pageProps} />
     </ThemeProvider>
   )
