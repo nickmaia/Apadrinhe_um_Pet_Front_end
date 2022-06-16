@@ -12,7 +12,7 @@ export function useCadastro() {
 
     function cadastrar() {
         if (validarFormulario()) {
-            ApiService.post('/pet', {
+            ApiService.post('apadrinheumpet.herokuapp.com/pet', {
                 nome,
                 historia,
                 foto

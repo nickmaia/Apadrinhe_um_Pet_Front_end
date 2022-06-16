@@ -12,7 +12,7 @@ export function useIndex() {
         [mensagem, setMensagem] = useState('');
 
     useEffect(() => {
-        ApiService.get('/pet')
+        ApiService.get('apadrinheumpet.herokuapp.com/pet')
             .then((resposta) => {
                 setListaPets(resposta.data);
             })
@@ -21,7 +21,7 @@ export function useIndex() {
     function adotar() {
         if (petSelecionado !== null) {
             if (validarDadosAdocao()) {
-                ApiService.post('/adocoes', {
+                ApiService.post('apadrinheumpet.herokuapp.com/adocoes', {
                     pet_id: petSelecionado.id,
                     email,
                     valor,

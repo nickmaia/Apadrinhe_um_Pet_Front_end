@@ -7,7 +7,7 @@ export function useRelatorio() {
     const [listaRelatorio, setListaRelatorio] = useState<Relatorio[]>([]);
 
     useEffect(() => {
-        ApiService.get('/adocoes').then((resposta) => {
+        ApiService.get('apadrinheumpet.herokuapp.com/adocoes').then((resposta) => {
             setListaRelatorio(resposta.data);
         })
     }, [])
